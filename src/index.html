@@ -1,33 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video </title>
-<link rel="stylesheet" href="/src/style.css">
-</head>
-<body>
-    <div class="video-bg">
-        <!-- <video src="/video/-33194.mp4" type="video/mp4" autoplay muted loop></video> -->
-        <video src="/video/-71122.mp4" type="video/mp4" autoplay muted loop></video>
-        <div class="effects"></div>
-        <div class="video-bg__content">
-            <!-- <h1>Video</h1> -->
-            <form class="search-form" id="search-form">
-                <input
-                  type="text"
-                  name="searchQuery"
-                  autocomplete="off"
-                  placeholder="Search..."
-                />
-                <button type="submit">
-                <svg class="icon-search">
-                    <use href="/icons/symbol-defs.svg#icon-gridicons_search" width="30px" heigh="30px"></use>
-                </svg>
-            </button>
-              </form>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <!-- -----------------------preloader----------------------------------- -->
+    <div class="preloader">
+      <svg
+        class="preloader__image"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+      >
+        <path
+          fill="currentColor"
+          d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"
+        ></path>
+      </svg>
     </div>
-</body>
+    <!-- -----------------------music----------------------------------- -->
+    <button id="playButton" class="playButton" type="button">Play Music</button>
+    <audio id="backgroundMusic" loop>
+        <source src="../music/slow-piano-145044.mp3" type="audio/mpeg">
+      </audio>
+      
+    <div class="video-bg">
+      <!-- <video src="/video/-33194.mp4" type="video/mp4" autoplay muted loop></video> -->
+      <video
+        src="/video/-71122.mp4"
+        type="video/mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+      <div class="effects"></div>
+      <div class="video-bg__content">
+        <form class="search-form" id="search-form">
+          <input
+            type="text"
+            name="searchQuery"
+            autocomplete="off"
+            placeholder="Search..."
+          />
+          <button type="submit">
+            <svg class="icon-search">
+              <use
+                href="/icons/symbol-defs.svg#icon-gridicons_search"
+                width="30px"
+                heigh="30px"
+              ></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="preloader.js" type="module"></script>
+    <script src="music.js" type="module"></script>
+
+  </body>
 </html>
